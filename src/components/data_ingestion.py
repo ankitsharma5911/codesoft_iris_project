@@ -25,7 +25,7 @@ class DataIngestion:
 
 
         try:
-            df = pd.read_csv(os.path.join('data/raw',"IRIS.csv"))
+            df = pd.read_csv(os.path.join('data/raw',"IRIS.csv"),index_col="Unnamed: 0")
             logging .info("Dataset read as pandas Dataframe")
 
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok= True)
